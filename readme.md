@@ -1,0 +1,2 @@
+# fastinvest
+ Junior Task
