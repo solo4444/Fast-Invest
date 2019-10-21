@@ -19,7 +19,7 @@ class CreateTransactionsTable extends Migration
             $table->string("r_name");
             $table->string("s_uid");
             $table->string("s_name");
-            $table->integer("amount");
+            $table->double("amount");
             $table->timestamp('added_on');
         });
     }

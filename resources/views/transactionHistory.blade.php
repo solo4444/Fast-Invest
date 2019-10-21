@@ -9,10 +9,11 @@
       
         @foreach ($sent_transactions as $stransaction)
         <div class="card w-100">
-            <h4 class="card-title ml-2 mt-3">to:{{$stransaction->r_name}}</h3>
-            <p class="card-text  ml-2">from:{{$stransaction->s_name}}<p>
+            <h3 class="card-title ml-2 mt-3">to:{{$stransaction->r_name}}</h3>
+            <p class="card-text ml-2">UID:{{$stransaction->r_uid}}<p>
+            <h5 class="card-text  ml-2">from:{{$stransaction->s_name}}<h5>
             <p class="card-text ml-2">on:{{$stransaction->added_on}}<p>
-            <h5 class="card-title ml-2">amount:  {{$stransaction->amount}}$</h5>
+            <h4 class="card-title ml-2">amount:  {{$stransaction->amount}}$</h4>
         </div>
         
         @endforeach
@@ -21,10 +22,11 @@
         <h2>Recieved transactions</h2>
         @foreach ($recieved_transactions as $rtransaction)
         <div class="card w-100">
-                <h4 class="card-title ml-2 mt-3">From:{{$rtransaction->s_name}}</h3>
-                <p class="card-text  ml-2">to:{{$rtransaction->r_name}}<p>
+                <h3 class="card-title ml-2 mt-3">From:{{$rtransaction->s_name}}</h3>
+                <p class="card-text ml-2">UID:{{$rtransaction->s_uid}}<p>
+                <h5 class="card-text  ml-2">to:{{$rtransaction->r_name}}<h5>
                 <p class="card-text ml-2">on:{{$rtransaction->added_on}}<p>
-                <h5 class="card-title ml-2">amount:  {{$rtransaction->amount}}$</h5>
+                <h4 class="card-title ml-2">amount:  {{$rtransaction->amount}}$</h4>
             </div>
         @endforeach
     </div>

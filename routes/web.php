@@ -18,6 +18,7 @@ Route::get('/transfer', 'HomeController@transfer')->name('transfer');
 Route::get('/account', 'HomeController@account')->name('account');
 Route::get('/transactionHistory', 'TransactionController@show')->name('show');
 Route::get('/account', 'HomeController@account')->name('account');
+//Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::post('transactionsStore', 'TransactionController@store')->name('store');
 Route::resource('transactions', 'TransactionController')->only('store', 'show');
 Auth::routes();

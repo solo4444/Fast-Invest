@@ -9,6 +9,13 @@
             <a class="p-2 text-dark" href="{{ route('transfer') }}">Make transfer</a>
             <a class="p-2 text-dark" href="{{ route('show',['id'=> Auth::id()]) }}">Transfer history</a>
             <a class="p-2 text-dark" href="{{ route('account') }}">Account</a>
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+                
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
         </nav>
     </div>
     <div class="container">
